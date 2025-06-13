@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.title {
+  @apply opacity-0 text-center transition-all duration-1000 ease-out;
+}
+.title.fade-in {
+  @apply opacity-100;
+}
+.title.move-up {
+  @apply translate-y-[-8rem] md:translate-y-[-10rem];
+}
+.button-container {
+  @apply opacity-0 transition-all duration-1000 ease-out;
+}
+.button-container.fade-in {
+  @apply opacity-100 transform scale-100;
+}
+.excuse {
+  @apply opacity-0 transform translate-y-4;
+}
+.excuse.animate-slide-up {
+  @apply opacity-100 transform translate-y-0 transition-all duration-700 ease-out;
+}
+.animate-slide-in {
+  animation: slideIn 0.5s ease-out;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-10px);
+  }
+  40%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+.loader {
+  @apply animate-spin;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "excuses-backend",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^3.6.0",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "supertest": "^6.3.3"
+  }
+}
